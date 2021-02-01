@@ -1,0 +1,52 @@
+<template>
+  <div class="col-sm-6 col-lg-3">
+    <nuxt-link :to="{name: 'products-product',params: { product: `${product.slug}-${product.id}` }}">
+      <div class="menu-6-item bg-white">
+        <div class="menu-6-img rel">
+          <div class="hover-overlay">
+            <img class="img-fluid" :src="product.images[0]" :alt="product.title">
+            <span class="item-code bg-tra-dark">8 pcs</span>
+            <div class="menu-img-zoom ico-25">
+              <a href="images/menu/roll-11-1.jpg" class="image-link">
+                <span class="flaticon-zoom"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-6-txt rel">
+          <div class="item-rating">
+            <div class="stars-rating stars-lg">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+
+          <h5 class="h5-sm">{{ product.title }}</h5>
+          <div class="menu-6-price bg-salmon">
+            <h5 class="h5-xs white-color">{{ product.price | formatPrice }}</h5>
+          </div>
+          <div class="add-to-cart bg-yellow ico-10">
+            <a href="product-single-1.html"><span class="flaticon-shopping-bag"></span> Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </nuxt-link>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ProductsListCard',
+  props: {
+    product: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
+
