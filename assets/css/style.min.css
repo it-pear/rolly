@@ -11856,7 +11856,8 @@ a.text-dark:hover {
 }
 
 .flaticon-shopping-bag:before {
-    content: "\f19e"
+    content: "\f19e";
+    color: white;
 }
 
 .flaticon-heart:before {
@@ -11940,7 +11941,42 @@ a.text-dark:hover {
 .navik-header-container {
     position: relative
 }
-
+.tel-lg{
+  display: block;       
+}
+.tel-mb{
+    display: none;  
+}
+.basket-lg{
+    display: block; 
+}
+.basket-mb{
+    display: none;  
+}
+@media (max-width: 992px) {
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .tel-mb{
+        display: block;  
+        color: #f7be27;
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 15px;
+    }
+    .tel-lg{
+        display: none !important;
+    }
+    .basket-lg{
+        display: none !important; 
+    }
+    .basket-mb{
+        display: block;  
+        margin-left: 10px;
+    }
+}
 .navik-menu>ul {
     display: none;
     padding: 0 0 20px
@@ -12066,7 +12102,7 @@ a.text-dark:hover {
     transition: transform 330ms ease-out, -webkit-transform 330ms ease-out
 }
 
-.burger-menu.menu-open {
+.burger-menu.menuopen {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg)
@@ -12109,13 +12145,13 @@ a.text-dark:hover {
     transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
 }
 
-.menu-open .line-menu.first-line {
+.menuopen .line-menu.first-line {
     -webkit-transform: rotate(-90deg) translateX(3px);
     -ms-transform: rotate(-90deg) translateX(3px);
     transform: rotate(-90deg) translateX(3px)
 }
 
-.menu-open .line-menu.last-line {
+.menuopen .line-menu.last-line {
     -webkit-transform: rotate(-90deg) translateX(-3px);
     -ms-transform: rotate(-90deg) translateX(-3px);
     transform: rotate(-90deg) translateX(-3px)
@@ -12269,13 +12305,13 @@ a.text-dark:hover {
     transition: transform 330ms ease-out, -webkit-transform 330ms ease-out
 }
 
-.navik-header-overlay .burger-menu.menu-open {
+.navik-header-overlay .burger-menu.menuopen {
     -webkit-transform: rotate(0);
     -ms-transform: rotate(0);
     transform: rotate(0)
 }
 
-.navik-header-overlay .burger-menu.menu-open>span {
+.navik-header-overlay .burger-menu.menuopen>span {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg)
@@ -12302,7 +12338,7 @@ a.text-dark:hover {
     transition: all 0.3s ease-in-out
 }
 
-.nav-menu-wrapper.overlay-menu-open {
+.nav-menu-wrapper.overlay-menuopen {
     visibility: visible;
     opacity: 1
 }
@@ -12820,7 +12856,7 @@ a.text-dark:hover {
     transition-duration: 0.4s
 }
 
-.menu-slide .nav-menu-wrapper.overlay-menu-open {
+.menu-slide .nav-menu-wrapper.overlay-menuopen {
     -webkit-box-shadow: -15px 0 60px -5px rgba(0, 0, 0, 0.3);
     box-shadow: -15px 0 60px -5px rgba(0, 0, 0, 0.3);
     -webkit-transform: translateX(0);
@@ -12857,7 +12893,7 @@ a.text-dark:hover {
     transition-delay: 0.1s
 }
 
-.overlay-menu-open+.slidemenu-bg-overlay {
+.overlay-menuopen+.slidemenu-bg-overlay {
     visibility: visible;
     opacity: 1;
     -webkit-transition-delay: 0s;
@@ -12927,7 +12963,7 @@ a.text-dark:hover {
     opacity: 1
 }
 
-.navik-header-overlay.header-dark .burger-menu.menu-open {
+.navik-header-overlay.header-dark .burger-menu.menuopen {
     background-color: #000
 }
 
@@ -13061,13 +13097,13 @@ a.text-dark:hover {
     background-color: #fff
 }
 
-.navik-fixed-sidebar+.burger-menu.menu-open {
+.navik-fixed-sidebar+.burger-menu.menuopen {
     -webkit-transform: rotate(0);
     -ms-transform: rotate(0);
     transform: rotate(0)
 }
 
-.navik-fixed-sidebar+.burger-menu.menu-open>span {
+.navik-fixed-sidebar+.burger-menu.menuopen>span {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg)
@@ -16677,7 +16713,16 @@ span.item-code {
 }
 
 #header-3.navik-header {
-    padding-top: 20px
+    padding-top: 10px;
+    position: fixed;
+}
+@media (min-width: 992px) {
+    #header-3.navik-header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: rgba(165, 161, 161, 0.8);
+    }
+    
 }
 
 .navik-menu ul li>a {
@@ -18148,10 +18193,15 @@ span.ico-holder {
     padding-left: 0
 }
 
-.menu-5-txt h5,
-.menu-6-txt h5 {
+.h5-sm {
     margin-top: 5px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    min-height: 64px;
+}
+@media (max-width: 772px) {
+    .h5-sm {
+        min-height: auto;
+    }
 }
 
 .menu-7-txt h6 {
@@ -18366,6 +18416,20 @@ span.ico-holder {
     transition: -webkit-transform 400ms;
     transition: transform 400ms;
     transition: transform 400ms, -webkit-transform 400ms
+}
+@media (min-width: 992px) {
+    .hover-overlay{
+        height: 178px;
+    }
+    .hover-overlay img{
+        width: 100%;
+    }
+}
+@media (max-width: 772px){
+    .hover-overlay img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .img-meta {
@@ -24905,7 +24969,7 @@ nav a#pull {
     }
     .menu-6-txt h5,
     .menu-7-txt h5 {
-        font-size: 1.7rem
+        font-size: 1.7rem;
     }
     .menu-6-txt p {
         font-size: 1.0625rem

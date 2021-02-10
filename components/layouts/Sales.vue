@@ -6,11 +6,15 @@
         <div class="col-md-10 offset-md-1">
           <div class="banner-2-txt text-center white-color">
 
-            <p class="p-xl">We put 100% of love and dedication into our dishes</p>
+            <h2>Наши акции</h2>
+            <p class="p-xl">10% скидка при доставки еды в день рождения на дом или в офис!</p>
+            <p class="p-xl">Подари любимой романтический ужин на День Святого Валентина. Закажи суши-сет и получи скидку 10%!</p>
+            <p class="p-xl">Счастливые часы.
+2 пиццы по цене 1 при заказе в будние дни 
+с 10:30 до 12:00 и с 16:00 до 19:00.
+</p>
 
-            <h2>Реклама акции здесь</h2>
-
-            <a href="menu-3-1.html" class="btn btn-lg btn-salmon tra-white-hover">Explore Our Menu</a>
+            <a href="#" class="btn btn-lg btn-salmon tra-white-hover">Сделать заказ</a>
 
           </div>
         </div>

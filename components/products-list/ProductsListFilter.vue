@@ -17,7 +17,7 @@
             class="tab-link"
             :class="{ 'current': $route.params.category === `${category.slug}-${category.id}` }"
           >
-            <span class="flaticon-fries"></span>
+            <img class="categoryimg" :src="`${category.img}`" alt="">
             <h5 class="h5-sm">
               <nuxt-link :to="{name: 'categories-category', params: { category: `${category.slug}-${category.id}` }, hash: '#menu-6' }">
                 {{ category.title }}
@@ -49,3 +49,8 @@ export default {
 }
 </script>
 
+<style lang="scss">
+  .categoryimg{
+    max-height: 55px;
+  }
+</style>

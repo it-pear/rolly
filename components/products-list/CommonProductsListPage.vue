@@ -13,6 +13,7 @@
 
  
       <products-list-filter />
+      <!-- <h3 class="text-center">Самый популярные блюда</h3><br><br> -->
       <products-list :loading="productsLoading" :products="products" />
       <ProductPagination />
 

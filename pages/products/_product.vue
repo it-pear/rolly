@@ -92,7 +92,22 @@
                     </span>
                   </p>
 
-                  <p>
+                  <!-- <p>
+                    <font style="vertical-align: inherit;">
+                      <font style="vertical-align: inherit;">
+                        Ингридиенты:
+                      </font>
+                    </font>
+                    <span>
+                      <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                          390 г
+                        </font>
+                      </font>
+                    </span>
+                  </p> -->
+
+                  <!-- <p>
                     <font style="vertical-align: inherit;">
                       <font style="vertical-align: inherit;">
                         Калорий: 
@@ -135,7 +150,7 @@
                         </font>
                       </font>
                     </span>
-                  </p>
+                  </p> -->
 
                 </div>
 

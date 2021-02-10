@@ -6,7 +6,7 @@
           <div class="hero-12-txt white-color text-center">
             <h2 class="salmon-color">Holiday Sushi</h2>
             <p class="p-xl lightgrey-color">
-              Предлагаем вам заказать ваши любимые суши и роллы, а также пиццу, закуски и напитки
+              Доставка суши и пиццы премиум-класса в Геленджике
             </p>
             <div class="hbox-1-wrapper ico-80">
               <div class="row">

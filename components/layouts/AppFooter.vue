@@ -9,7 +9,7 @@
           <div class="footer-socials-links">
             <ul class="foo-socials text-center clearfix w-100 text-center">
               <li>
-                <a href="#" class="ico-instagram">
+                <a href="https://www.instagram.com/holiday_sushi_gel/" class="ico-instagram">
                   <svg
                     viewBox="0 0 512.00096 512.00096"
                     enable-background="new 0 0 24 24"

@@ -6,27 +6,22 @@
           <div class="row">
             <div class="col-md-4">
               <div class="cbox-5">
-                <h5 class="h5-lg">Location</h5>
-                <p class="p-md">8721 M Central Avenue,</p>
-                <p class="p-md">Los Angeles, CA 90036,</p>
-                <p class="p-md">United States</p>
+                <h5 class="h5-lg">Местоположение</h5>
+                <p class="p-md">г. Геленджик</p>
+                <p class="p-md">ул. Курзальная - 12</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="cbox-5">
+                <h5 class="h5-lg">Рабочие часы</h5>
+                <p class="p-md">Ежедневно</p>
+                <p class="p-md">с 10:30 до 00:00</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="cbox-5">
                 <h5 class="h5-lg">Working Hours</h5>
-                <p class="p-md">Mon-Fri: 9:00AM - 10:00PM</p>
-                <p class="p-md">Saturday: 10:00AM - 8:30PM</p>
-                <p class="p-md">Sunday: 12:00PM - 5:00PM</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="cbox-5">
-                <h5 class="h5-lg">Working Hours</h5>
-                <p class="p-md">P: +12 3 3456 7890</p>
-                <p class="p-md">F: +12 9 8765 4321</p>
-                <p class="p-md">E: <a href="mailto:yourdomain@mail.com" class="yellow-color">hello@yourdomain.com</a>
-                </p>
+                <p class="p-md"><a href="tel:89960501010">+7 (996) 050-10-10</a></p>
               </div>
             </div>
           </div>
@@ -36,7 +31,7 @@
         <div class="col-md-12">
           <div id="gmap">
             <div class="google-map text-center">
-              Google maps
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.116548562125!2d38.072184314914786!3d44.553718701751805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f18a0d28b60a3f%3A0x4e23f4ae200ca835!2z0YPQuy4g0JrRg9GA0LfQsNC70YzQvdCw0Y8sIDEyLCDQk9C10LvQtdC90LTQttC40LosINCa0YDQsNGB0L3QvtC00LDRgNGB0LrQuNC5INC60YDQsNC5LCAzNTM0NjE!5e0!3m2!1sru!2sru!4v1612986667273!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
           </div>
         </div>
@@ -44,9 +39,9 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="section-title mb-40 text-center">
-            <h2 class="h2-xl">Get in Touch</h2>
-            <p class="p-xl">Aliquam a augue suscipit, luctus neque purus ipsum neque undo dolor
-              primis libero tempus, blandit a cursus varius magna
+            <h2 class="h2-xl">Быстрый заказ Роллов</h2>
+            <p class="p-xl">
+              Отправьте форму заявки нам и мы сразу вам перезвоним и доставим вашу любимую еду
             </p>
           </div>
         </div>
@@ -57,20 +52,17 @@
           <div class="form-holder">
             <form name="contactform" class="row contact-form" novalidate="novalidate">
               <div class="col-md-12 col-lg-6">
-                <input type="text" name="name" class="form-control name" placeholder="Your Name*">
+                <input type="text" name="name" class="form-control name" placeholder="Ваше имя*">
               </div>
               <div class="col-md-12 col-lg-6">
-                <input type="email" name="email" class="form-control email" placeholder="Email Address*">
-              </div>
-              <div class="col-md-12">
-                <input type="text" name="subject" class="form-control subject" placeholder="What's this about?">
+                <input type="email" name="email" class="form-control email" placeholder="+7 (___) ___-__-__*">
               </div>
               <div class="col-md-12">
                 <textarea name="message" class="form-control message" rows="6"
-                  placeholder="Your Message ..."></textarea>
+                  placeholder="Ваше сообщение"></textarea>
               </div>
               <div class="col-md-12 mt-5 text-right">
-                <button type="submit" class="btn btn-md btn-red tra-red-hover submit">Send Message</button>
+                <button type="submit" class="btn btn-md btn-red tra-red-hover submit">Отправить</button>
               </div>
               <div class="col-md-12 contact-form-msg text-center">
                 <div class="sending-msg"><span class="loading"></span></div>
