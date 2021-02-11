@@ -77,6 +77,12 @@
   "LazyProductListCard": {
     "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/ProductListCard.vue"
   },
+  "ProductListHeader": {
+    "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/ProductListHeader.vue"
+  },
+  "LazyProductListHeader": {
+    "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/ProductListHeader.vue"
+  },
   "ProductPagination": {
     "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/ProductPagination.vue"
   },

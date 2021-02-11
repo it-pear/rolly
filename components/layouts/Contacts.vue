@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-4">
               <div class="cbox-5">
-                <h5 class="h5-lg">Working Hours</h5>
+                <h5 class="h5-lg">Телефон:</h5>
                 <p class="p-md"><a href="tel:89960501010">+7 (996) 050-10-10</a></p>
               </div>
             </div>

@@ -11,6 +11,7 @@ export { default as Sentence } from '../..\\components\\layouts\\Sentence.vue'
 export { default as ProductGallery } from '../..\\components\\product-details\\ProductGallery.vue'
 export { default as CommonProductsListPage } from '../..\\components\\products-list\\CommonProductsListPage.vue'
 export { default as ProductListCard } from '../..\\components\\products-list\\ProductListCard.vue'
+export { default as ProductListHeader } from '../..\\components\\products-list\\ProductListHeader.vue'
 export { default as ProductPagination } from '../..\\components\\products-list\\ProductPagination.vue'
 export { default as ProductsList } from '../..\\components\\products-list\\ProductsList.vue'
 export { default as ProductsListFilter } from '../..\\components\\products-list\\ProductsListFilter.vue'
@@ -28,6 +29,7 @@ export const LazySentence = import('../..\\components\\layouts\\Sentence.vue' /*
 export const LazyProductGallery = import('../..\\components\\product-details\\ProductGallery.vue' /* webpackChunkName: "components/product-gallery" */).then(c => c.default || c)
 export const LazyCommonProductsListPage = import('../..\\components\\products-list\\CommonProductsListPage.vue' /* webpackChunkName: "components/common-products-list-page" */).then(c => c.default || c)
 export const LazyProductListCard = import('../..\\components\\products-list\\ProductListCard.vue' /* webpackChunkName: "components/product-list-card" */).then(c => c.default || c)
+export const LazyProductListHeader = import('../..\\components\\products-list\\ProductListHeader.vue' /* webpackChunkName: "components/product-list-header" */).then(c => c.default || c)
 export const LazyProductPagination = import('../..\\components\\products-list\\ProductPagination.vue' /* webpackChunkName: "components/product-pagination" */).then(c => c.default || c)
 export const LazyProductsList = import('../..\\components\\products-list\\ProductsList.vue' /* webpackChunkName: "components/products-list" */).then(c => c.default || c)
 export const LazyProductsListFilter = import('../..\\components\\products-list\\ProductsListFilter.vue' /* webpackChunkName: "components/products-list-filter" */).then(c => c.default || c)
