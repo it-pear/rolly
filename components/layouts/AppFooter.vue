@@ -29,7 +29,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="#" class="ico-vk">
                   <svg
                     id="regular"
@@ -44,7 +44,7 @@
                     />
                   </svg>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <br />
