@@ -14,7 +14,8 @@
 с 10:30 до 12:00 и с 16:00 до 19:00.
 </p>
 
-            <a href="#" class="btn btn-lg btn-salmon tra-white-hover">Сделать заказ</a>
+            <!-- <a href="#" class="btn btn-lg btn-salmon tra-white-hover">Сделать заказ</a> -->
+            <a href="tel:89960501010" class="btn btn-lg btn-red tra-red-hover">+7 (996) 050-10-10</a>
 
           </div>
         </div>

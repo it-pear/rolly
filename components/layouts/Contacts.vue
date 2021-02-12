@@ -36,7 +36,7 @@
           </div>
         </div>
       </div> 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="section-title mb-40 text-center">
             <h2 class="h2-xl">Быстрый заказ Роллов</h2>
@@ -70,7 +70,7 @@
             </form>
           </div>
         </div>
-      </div>
+      </div> -->
     </div> 
   </section>
 </template>
