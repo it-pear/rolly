@@ -12,14 +12,14 @@ $formName = $modx->getOption('formName', $formit->config, 'form-'.$modx->resourc
 $ip = $modx->getOption('REMOTE_ADDR', $_SERVER, '');
 
 #Данные с формы
-$fullName = $values['fullName'];
-$email = $values['email'];
+$name = $values['name-zv'];
+$phone = $values['phone-zv'];
 
 #Создаем массив
 $arr = array(
-"Имя" => $fullName,
-"Телефон" => $email,
-"Заявка на новый заказ" => $formName,
+"Имя" => $name,
+"Телефон" => $phone,
+"Название формы" => $formName,
 "Айпи" => $ip);
 
 /*Цикл по массиву (собираем сообщение) */

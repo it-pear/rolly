@@ -39,12 +39,12 @@
                 </div>
               </div>
               <div class="cart-checkout form-holder">
-                <form @submit.prevent="onSubmit">
+                <form @submit.prevent="onSubmit" action="asdasd">
                   <div
                     class="field"
                     :class="{ 'field--invalid': isFullNameInvalid }"
                   >
-                    <label class="field__label">Ваше имя</label>
+                    <label class="field__label" name="">Ваше имя</label>
                     <input
                       v-model="fullName"
                       type="text"
