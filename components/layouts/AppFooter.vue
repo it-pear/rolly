@@ -53,7 +53,8 @@
               &copy; 2021 holiday sushi <br /><br /><small
                 >все права защищены</small
               >
-            </p>
+            </p><br>
+            <a href="/policy" target="_blank">Политика конфиденциальности</a>
           </div>
         </div>
       </div>

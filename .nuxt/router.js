@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _068779e0 = () => interopDefault(import('..\\pages\\cart.vue' /* webpackChunkName: "pages/cart" */))
 const _eccd87b4 = () => interopDefault(import('..\\pages\\categories\\index.vue' /* webpackChunkName: "pages/categories/index" */))
+const _a94e3e1c = () => interopDefault(import('..\\pages\\policy.vue' /* webpackChunkName: "pages/policy" */))
 const _57e9a9de = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
 const _0b31f39e = () => interopDefault(import('..\\pages\\categories\\_category.vue' /* webpackChunkName: "pages/categories/_category" */))
 const _1c2cbb58 = () => interopDefault(import('..\\pages\\products\\_product.vue' /* webpackChunkName: "pages/products/_product" */))
@@ -35,6 +36,10 @@ export const routerOptions = {
     path: "/categories",
     component: _eccd87b4,
     name: "categories"
+  }, {
+    path: "/policy",
+    component: _a94e3e1c,
+    name: "policy"
   }, {
     path: "/products",
     component: _57e9a9de,

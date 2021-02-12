@@ -11,54 +11,6 @@
   "LazyCartProductsList": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/cart/CartProductsList.vue"
   },
-  "About": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/About.vue"
-  },
-  "LazyAbout": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/About.vue"
-  },
-  "AppFooter": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppFooter.vue"
-  },
-  "LazyAppFooter": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppFooter.vue"
-  },
-  "AppHeader": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppHeader.vue"
-  },
-  "LazyAppHeader": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppHeader.vue"
-  },
-  "Contacts": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Contacts.vue"
-  },
-  "LazyContacts": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Contacts.vue"
-  },
-  "Delivery": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Delivery.vue"
-  },
-  "LazyDelivery": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Delivery.vue"
-  },
-  "HeaderSingle": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/HeaderSingle.vue"
-  },
-  "LazyHeaderSingle": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/HeaderSingle.vue"
-  },
-  "Sales": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sales.vue"
-  },
-  "LazySales": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sales.vue"
-  },
-  "Sentence": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sentence.vue"
-  },
-  "LazySentence": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sentence.vue"
-  },
   "ProductGallery": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/product-details/ProductGallery.vue"
   },
@@ -106,5 +58,53 @@
   },
   "LazyProductsListFilter": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/products-list/ProductsListFilter.vue"
+  },
+  "About": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/About.vue"
+  },
+  "LazyAbout": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/About.vue"
+  },
+  "AppFooter": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppFooter.vue"
+  },
+  "LazyAppFooter": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppFooter.vue"
+  },
+  "AppHeader": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppHeader.vue"
+  },
+  "LazyAppHeader": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/AppHeader.vue"
+  },
+  "Contacts": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Contacts.vue"
+  },
+  "LazyContacts": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Contacts.vue"
+  },
+  "Delivery": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Delivery.vue"
+  },
+  "LazyDelivery": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Delivery.vue"
+  },
+  "HeaderSingle": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/HeaderSingle.vue"
+  },
+  "LazyHeaderSingle": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/HeaderSingle.vue"
+  },
+  "Sales": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sales.vue"
+  },
+  "LazySales": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sales.vue"
+  },
+  "Sentence": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sentence.vue"
+  },
+  "LazySentence": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sentence.vue"
   }
 }

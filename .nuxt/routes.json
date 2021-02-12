@@ -14,6 +14,13 @@
     "_name": "_eccd87b4"
   },
   {
+    "name": "policy",
+    "path": "/policy",
+    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\policy.vue",
+    "chunkName": "pages/policy",
+    "_name": "_a94e3e1c"
+  },
+  {
     "name": "products",
     "path": "/products",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\products\\\\index.vue",

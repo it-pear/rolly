@@ -3,13 +3,15 @@ import Vue from 'vue'
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
+import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\assets\\css\\style.min.css'
 
 import _6f6c098b from '..\\layouts\\default.vue'
+import _f8063eb0 from '..\\layouts\\policy.vue'
 import _ee708084 from '..\\layouts\\single.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_single": sanitizeComponent(_ee708084) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_policy": sanitizeComponent(_f8063eb0),"_single": sanitizeComponent(_ee708084) }
 
 export default {
   render (h, props) {
@@ -44,7 +46,7 @@ export default {
       }
     }, [
       loadingEl,
-
+      h(NuxtBuildIndicator),
       transitionEl
     ])
   },
@@ -95,10 +97,6 @@ export default {
 
     isFetching () {
       return this.nbFetching > 0
-    },
-
-    isPreview () {
-      return Boolean(this.$options.previewData)
     },
   },
 
@@ -184,6 +182,10 @@ export default {
     },
 
     setLayout (layout) {
+      if(layout && typeof layout !== 'string') {
+        throw new Error('[nuxt] Avoid using non-string value as layout property.')
+      }
+
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
