@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="section-title mb-60 text-center">
-            <h2 class="h2-xl">Похожие продукты</h2>
+            <h2 class="h2-xl">Похожие блюда</h2>
           </div>
         </div>
       </div>
