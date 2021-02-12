@@ -14,12 +14,12 @@
       <!-- <h3 class="text-center">Самый популярные блюда</h3><br><br> -->
       <div class="row">
         <products-list-card
-          v-for="product in products.slice(0, 4)"
+          v-for="product in filteredPosts.slice(0, 8)" 
           :key="product.id"
           :product="product"
         />
       </div>
-      
+      <!-- {{filteredPosts}} -->
     </div>
   </section>
 </template>
@@ -35,18 +35,25 @@ export default {
     loadProducts: {
       type: Function,
       required: true,
-      category: 'kokQqWP'
     },
+    cateoryProduc: String
   },
   data() {
     return {
       products: [],
-      productsLoading: true,
+      productsLoading: false,
     };
   },
-  async created() {
-    this.productsLoading = true;
-    this.products = await this.loadProducts();
+  computed: {
+    filteredPosts() {
+      return this.products.filter(p => p.category == this.cateoryProduc)
+    }
   },
+
+  async created() {
+    this.productsLoading = false;
+    this.products = await this.loadProducts();
+    
+  }
 };
 </script>

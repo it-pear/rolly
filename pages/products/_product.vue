@@ -30,7 +30,8 @@
                 </div>
 
               </div>
-{{product.category}}
+{{cateoryProduc}}
+
               <div class="product-txt">
 
                 <!-- Text -->
@@ -115,7 +116,7 @@
       </div><br>	  
 
     </section>
-    <CommonRecommendProductsList :category="`Yx6JrxR`" :load-products="loadProducts" />
+    <CommonRecommendProductsList :cateoryProduc="cateoryProduc" :load-products="loadProducts" />
 
 
   </div>
@@ -131,6 +132,7 @@ import CommonRecommendProductsList from '~/components/products-list/CommonRecomm
 export default {
   layout: 'single',
   components: { ProductGallery, HeaderSingle, CommonRecommendProductsList },
+
   data () {
     return {
       product: {},
@@ -138,7 +140,7 @@ export default {
       selectedColor: null,
       selectedSize: null,
       isSelectedColorInvalid: false,
-      isSelectedSizeInvalid: false
+      isSelectedSizeInvalid: false,
     }
   },
   computed: {
@@ -151,6 +153,9 @@ export default {
       }
       const variant = this.product.variants.find(variant => variant.color === this.selectedColor)
       return variant.available_sizes.split(', ')
+    },
+    cateoryProduc() {
+      return this.product.category
     }
   },
   created () {
