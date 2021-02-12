@@ -3,11 +3,13 @@
     <li
       v-for="category in categories"
       :key="category.id"
+      v-on:click="onclick"
       :class="{
         current: $route.params.category === `${category.slug}-${category.id}`,
       }"
     >
       <nuxt-link
+        
         :to="{
           name: 'categories-category',
           params: { category: `${category.slug}-${category.id}` },
@@ -25,10 +27,16 @@ import { mapState } from "vuex";
 
 export default {
   name: "ProductsListFilter",
+
   computed: {
     ...mapState({
       categories: (state) => state.filters.categories,
     }),
+  },
+  methods: {
+    onclick() {
+      this.$emit('close')
+    },
   },
   created() {
     if (!this.categories) {

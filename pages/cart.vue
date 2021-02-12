@@ -5,25 +5,31 @@
       v-show="status === statuses.creating"
       class="preloader preloader--fullpage"
     />
-
+    <div v-show="status === statuses.success" class="cart-message text-center">
+      <br /><br />
+      <div class="cart-message__icon cart-message__icon__fail">
+        <img src="~/assets/icons/check.svg" alt="success" />
+      </div>
+      <br />
+      <div class="cart-message__title">
+        <h2>
+          Ваш заказ в обработке, наш менеджер в скором времени вам перезвонит
+          для уточнения заказа
+        </h2>
+      </div>
+      <br /><br />
+    </div>
     <div class="cart" :class="{ loading: status === statuses.creating }">
       <div v-show="status !== statuses.success">
         <cart-products-list />
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div v-show="status === statuses.success" class="cart-message text-center">
-                <br>
-                <div class="cart-message__icon">
-                  <img src="~/assets/icons/check.svg" alt="success" />
-                </div>
-                <div class="cart-message__title">
-                  Ваш заказ в обработке, наш менеджер в скором времени вам
-                  перезвонит для уточнения заказа
-                </div>
-              </div>
-              <div v-show="status === statuses.fail" class="cart-message text-center">
-                <br>
+              <div
+                v-show="status === statuses.fail"
+                class="cart-message text-center"
+              >
+                <br />
                 <div class="cart-message__icon">
                   <img src="~/assets/icons/x-circle.svg" alt="fail" />
                 </div>
@@ -80,12 +86,13 @@
 <script>
 import CartProductsList from "~/components/cart/CartProductsList";
 import HeaderSingle from "~/components/layouts/HeaderSingle";
+const querystring = require("querystring");
 
 const cartStatus = {
   init: 0,
   creating: 1,
   success: 2,
-  fail: 3,
+  fail: 3
 };
 
 export default {
@@ -94,14 +101,14 @@ export default {
   data() {
     return {
       product: {
-        title: "Корзина",
+        title: "Корзина"
       },
       fullName: "",
       email: "",
       isFullNameInvalid: false,
       isPhoneInvalid: false,
       status: cartStatus.init,
-      statuses: cartStatus,
+      statuses: cartStatus
     };
   },
   methods: {
@@ -121,17 +128,26 @@ export default {
       }
       return valid;
     },
-    async onSubmit() {
+    async onSubmit(e) {
       if (this.isValid()) {
         this.status = cartStatus.creating;
         const success = await this.$store.dispatch("cart/submit", {
           fullName: this.fullName,
-          email: this.email,
+          email: this.email
         });
         this.status = success ? cartStatus.success : cartStatus.fail;
+        e.preventDefault();
+        this.$axios
+        .post(
+          "/sendMail.php",
+          querystring.stringify(this.fullName, this.email)
+        )
+        .then(res => {
+          this.sent = true;
+        });
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -147,5 +163,8 @@ export default {
     max-width: 100%;
     margin: 20px auto;
   }
+}
+.cart-message__icon__fail img {
+  width: 80px;
 }
 </style>

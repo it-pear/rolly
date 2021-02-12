@@ -41,7 +41,7 @@
           class="navik-menu menu-caret navik-yellow mb-0"
           v-bind:class="{ navikmenuactive: isActive }"
         >
-        <HeaderList />
+        <HeaderList @close="isActive=!isActive" />
           <ul class="top-list">
             <!-- <li>
               <a href="#">Акции </a>
