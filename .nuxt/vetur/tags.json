@@ -71,6 +71,12 @@
   "LazyCommonProductsListPage": {
     "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/CommonProductsListPage.vue"
   },
+  "CommonRecommendProductsList": {
+    "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/CommonRecommendProductsList.vue"
+  },
+  "LazyCommonRecommendProductsList": {
+    "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/CommonRecommendProductsList.vue"
+  },
   "ProductListCard": {
     "description": "Auto imported from C:/Users/yurec/OneDrive/Рабочий стол/projects/rolly/components/products-list/ProductListCard.vue"
   },

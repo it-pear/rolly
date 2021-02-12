@@ -16859,6 +16859,14 @@ span.ico-holder {
     margin-bottom: 70px
 }
 
+@media (max-width: 772px) {
+    #tabs-nav {
+        height: 420px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
+
 .tab-content.current, .tab-content.displayed {
     display: inherit
 }
@@ -16884,6 +16892,7 @@ span.ico-holder {
     margin-top: 15px;
     margin-bottom: 0
 }
+
 @media (max-width: 772px) {
     .tabs-1 li h5 {
         line-height: 2;
@@ -26373,8 +26382,9 @@ nav a#pull {
         display: flex;
     }
 }
-@media (max-width: 772px){
-    #navik-header-container-top-list{
+
+@media (max-width: 772px) {
+    #navik-header-container-top-list {
         height: 80vh;
         overflow-y: scroll;
     }

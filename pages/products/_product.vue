@@ -23,14 +23,14 @@
                   <h4 class="h4-xl yellow-color">
                     <font style="vertical-align: inherit;">
                       <font style="vertical-align: inherit;">
-                        {{ product.price }} ₽ублей
+                        {{ product.price }} ₽ублей 
                       </font>
                     </font>
                   </h4>
                 </div>
 
               </div>
-
+{{product.category}}
               <div class="product-txt">
 
                 <!-- Text -->
@@ -92,69 +92,8 @@
                     </span>
                   </p>
 
-                  <!-- <p>
-                    <font style="vertical-align: inherit;">
-                      <font style="vertical-align: inherit;">
-                        Ингридиенты:
-                      </font>
-                    </font>
-                    <span>
-                      <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">
-                          390 г
-                        </font>
-                      </font>
-                    </span>
-                  </p> -->
-
-                  <!-- <p>
-                    <font style="vertical-align: inherit;">
-                      <font style="vertical-align: inherit;">
-                        Калорий: 
-                      </font>
-                    </font>
-                    <span>
-                      <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">
-                          680 кДж
-                        </font>
-                      </font>
-                    </span>
-                  </p>
-
-                  <p>
-                    <font style="vertical-align: inherit;">
-                      <font style="vertical-align: inherit;">
-                        Аллергии: 
-                      </font>
-                    </font>
-                    <span>
-                      <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">
-                          Лактоза, Глютен, Горчица
-                        </font>
-                      </font>
-                    </span>
-                  </p>
-
-                  <p>
-                    <font style="vertical-align: inherit;">
-                      <font style="vertical-align: inherit;">
-                        Теги: 
-                      </font>
-                    </font>
-                    <span>
-                      <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">
-                          Бургеры, Фастфуд, Testo
-                        </font>
-                      </font>
-                    </span>
-                  </p> -->
-
                 </div>
 
-                <!-- <input class="qty" type="number" min="1" max="20" value="1"> -->
 
                 <!-- Add To Cart -->
                 <a class="add-to-cart-btn bg-yellow ico-20 text-center" @click="addToCart">
@@ -173,8 +112,12 @@
           </div>
 
         </div>	  
-      </div>	  
+      </div><br>	  
+
     </section>
+    <CommonRecommendProductsList :category="`Yx6JrxR`" :load-products="loadProducts" />
+
+
   </div>
 
 </template>
@@ -183,10 +126,11 @@
 import Product from '~/api/product'
 import ProductGallery from '~/components/product-details/ProductGallery'
 import HeaderSingle from '~/components/layouts/HeaderSingle'
+import CommonRecommendProductsList from '~/components/products-list/CommonRecommendProductsList'
 
 export default {
   layout: 'single',
-  components: { ProductGallery, HeaderSingle },
+  components: { ProductGallery, HeaderSingle, CommonRecommendProductsList },
   data () {
     return {
       product: {},
@@ -218,6 +162,9 @@ export default {
       this.product = await Product.get(this.productId)
       this.loading = false
     },
+    async loadProducts () {
+      return await Product.list()
+		},
     isValid () {
       let valid = true
       if (this.product.variants && this.product.variants.length) {

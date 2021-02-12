@@ -92,7 +92,7 @@
                 </tr>
               </tbody>
             </table>
-            <button class="btn btn-md btn-salmon tra-salmon-hover">Оформить заказ</button>
+            <!-- <button class="btn btn-md btn-salmon tra-salmon-hover">Оформить заказ</button> -->
           </div>
         </div> 
       </div>

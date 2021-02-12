@@ -1,48 +1,76 @@
 <template>
   <div>
     <HeaderSingle :product="product" />
-    <div v-show="status === statuses.creating" class="preloader preloader--fullpage" />
-
     <div
-      class="cart"
-      :class="{ 'loading': status === statuses.creating }"
-    >
-      <div v-show="status === statuses.success" class="cart-message">
-        <div class="cart-message__icon">
-          <img src="~/assets/icons/check.svg" alt="success">
-        </div>
-        <div class="cart-message__title">
-          Your order has been placed. We're going to contact you soon.
-        </div>
-      </div>
-      <div v-show="status === statuses.fail" class="cart-message">
-        <div class="cart-message__icon">
-          <img src="~/assets/icons/x-circle.svg" alt="fail">
-        </div>
-        <div class="cart-message__title">
-          Something went wrong. Try to place the order again or contact us using email.
-        </div>
-      </div>
+      v-show="status === statuses.creating"
+      class="preloader preloader--fullpage"
+    />
 
-      
+    <div class="cart" :class="{ loading: status === statuses.creating }">
       <div v-show="status !== statuses.success">
         <cart-products-list />
-        <div class="cart-checkout">
-          <!-- <form @submit.prevent="onSubmit">
-            <div class="field" :class="{ 'field--invalid': isFullNameInvalid }">
-              <label class="field__label">Full Name</label>
-              <input v-model="fullName" type="text" class="field__input">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div v-show="status === statuses.success" class="cart-message text-center">
+                <br>
+                <div class="cart-message__icon">
+                  <img src="~/assets/icons/check.svg" alt="success" />
+                </div>
+                <div class="cart-message__title">
+                  Ваш заказ в обработке, наш менеджер в скором времени вам
+                  перезвонит для уточнения заказа
+                </div>
+              </div>
+              <div v-show="status === statuses.fail" class="cart-message text-center">
+                <br>
+                <div class="cart-message__icon">
+                  <img src="~/assets/icons/x-circle.svg" alt="fail" />
+                </div>
+                <div class="cart-message__title">
+                  Что-то пошло не так. Попробуйте оформить заказ еще раз или
+                  свяжитесь с нами по телефону.
+                </div>
+              </div>
+              <div class="cart-checkout form-holder">
+                <form @submit.prevent="onSubmit">
+                  <div
+                    class="field"
+                    :class="{ 'field--invalid': isFullNameInvalid }"
+                  >
+                    <label class="field__label">Ваше имя</label>
+                    <input
+                      v-model="fullName"
+                      type="text"
+                      class="field__input form-control"
+                      required
+                    />
+                  </div>
+                  <br />
+                  <div
+                    class="field"
+                    :class="{ 'field--invalid': isEmailInvalid }"
+                  >
+                    <label class="field__label">Ваш телефон</label>
+                    <input
+                      v-model="email"
+                      type="tel"
+                      class="field__input form-control"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <button
+                      type="submit"
+                      class="btn btn-md btn-red tra-red-hover btn--primary btn--large"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="field" :class="{ 'field--invalid': isEmailInvalid }">
-              <label class="field__label">Email</label>
-              <input v-model="email" type="text" class="field__input">
-            </div>
-            <div class="field">
-              <button type="submit" class="btn btn--primary btn--large">
-                Place an order
-              </button>
-            </div>
-          </form> -->
+          </div>
         </div>
       </div>
     </div>
@@ -50,74 +78,74 @@
 </template>
 
 <script>
-import CartProductsList from '~/components/cart/CartProductsList'
-import HeaderSingle from '~/components/layouts/HeaderSingle'
+import CartProductsList from "~/components/cart/CartProductsList";
+import HeaderSingle from "~/components/layouts/HeaderSingle";
 
 const cartStatus = {
   init: 0,
   creating: 1,
   success: 2,
-  fail: 3
-}
+  fail: 3,
+};
 
 export default {
-  layout: 'single',
+  layout: "single",
   components: { CartProductsList, HeaderSingle },
-  data () {
+  data() {
     return {
       product: {
-        title: 'Корзина'
+        title: "Корзина",
       },
-      fullName: '',
-      email: '',
+      fullName: "",
+      email: "",
       isFullNameInvalid: false,
-      isEmailInvalid: false,
+      isPhoneInvalid: false,
       status: cartStatus.init,
-      statuses: cartStatus
-    }
+      statuses: cartStatus,
+    };
   },
   methods: {
-    isValid () {
-      let valid = true
+    isValid() {
+      let valid = true;
       if (this.fullName.length < 1) {
-        this.isFullNameInvalid = true
-        valid = false
+        this.isFullNameInvalid = true;
+        valid = false;
       } else {
-        this.isFullNameInvalid = false
+        this.isFullNameInvalid = false;
       }
-      if (!this.email.includes('@')) {
-        this.isEmailInvalid = true
-        valid = false
+      if (this.email.length < 10) {
+        this.isEmailInvalid = true;
+        valid = false;
       } else {
-        this.isEmailInvalid = false
+        this.isEmailInvalid = false;
       }
-      return valid
+      return valid;
     },
-    async onSubmit () {
+    async onSubmit() {
       if (this.isValid()) {
-        this.status = cartStatus.creating
-        const success = await this.$store.dispatch('cart/submit', { fullName: this.fullName, email: this.email })
-        this.status = success ? cartStatus.success : cartStatus.fail
+        this.status = cartStatus.creating;
+        const success = await this.$store.dispatch("cart/submit", {
+          fullName: this.fullName,
+          email: this.email,
+        });
+        this.status = success ? cartStatus.success : cartStatus.fail;
       }
-    }
+    },
   },
-  head: {
-    title: 'Cart | Clothing Store'
-  }
-}
+};
 </script>
 
 <style lang="scss">
-  @media (max-width: 772px) {
-    .cart-product-img {
-      float: none !important;
-      width: 100%;
-      text-align: center;
-    }
-    .cart-product-img img{
-      max-height: 300px;
-      max-width: 100%;
-      margin: 20px auto;
-    }
+@media (max-width: 772px) {
+  .cart-product-img {
+    float: none !important;
+    width: 100%;
+    text-align: center;
   }
+  .cart-product-img img {
+    max-height: 300px;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
 </style>

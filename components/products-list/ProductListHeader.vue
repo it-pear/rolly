@@ -11,7 +11,7 @@
         :to="{
           name: 'categories-category',
           params: { category: `${category.slug}-${category.id}` },
-          hash: '#menu-6',
+          hash: '#catalogmenu',
         }"
       >
         {{ category.title }}

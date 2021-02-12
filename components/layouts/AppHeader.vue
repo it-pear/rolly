@@ -74,9 +74,16 @@
 
 <script>
 import HeaderList from "../products-list/ProductListHeader";
+import { mapGetters } from "vuex";
 
 export default {
   name: "AppHeader",
+  computed: {
+    ...mapGetters({
+      qty: "cart/productsQty",
+      categories: state => state.filters.categories
+    }),
+  },
   data() {
     return {
       isActive: false,
