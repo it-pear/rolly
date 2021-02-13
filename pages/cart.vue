@@ -65,6 +65,19 @@
                       required
                     />
                   </div>
+                  <br />
+                  <div
+                    class="field"
+                    :class="{ 'field--invalid': isAdresInvalid }"
+                  >
+                    <label class="field__label">Ваш Адрес</label>
+                    <input
+                      v-model="adres"
+                      type="tel"
+                      class="field__input form-control"
+                      required
+                    />
+                  </div>
                   <div class="field">
                     <button
                       type="submit"
@@ -126,6 +139,12 @@ export default {
       } else {
         this.isEmailInvalid = false;
       }
+      if (this.adres.length < 3) {
+        this.isAdresInvalid = true;
+        valid = false;
+      } else {
+        this.isAdresInvalid = false;
+      }
       return valid;
     },
     async onSubmit(e) {
@@ -133,14 +152,14 @@ export default {
         this.status = cartStatus.creating;
         const success = await this.$store.dispatch("cart/submit", {
           fullName: this.fullName,
-          email: this.email
+          email: this.email,
+          adres: this.adres
         });
         this.status = success ? cartStatus.success : cartStatus.fail;
         e.preventDefault();
-        this.$axios
-        .post(
+        this.$axios.post(
           "/sendMail.php",
-          querystring.stringify(this.fullName, this.email)
+          querystring.stringify(this.fullName, this.email, this.adres)
         )
         .then(res => {
           this.sent = true;

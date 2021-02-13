@@ -17,12 +17,12 @@
             class="tab-link"
             :class="{ 'current': $route.params.category === `${category.slug}-${category.id}` }"
           >
-            <img class="categoryimg" :src="`${category.img}`" alt="">
-            <h5 class="h5-sm">
-              <nuxt-link :to="{name: 'categories-category', params: { category: `${category.slug}-${category.id}` }, hash: '#catalogmenu' }">
+            <nuxt-link :to="{name: 'categories-category', params: { category: `${category.slug}-${category.id}` }, hash: '#catalogmenu' }">
+              <img class="categoryimg" :src="`${category.img}`" alt="">
+              <h5 class="h5-sm">
                 {{ category.title }}
-              </nuxt-link>
-            </h5>
+              </h5>
+            </nuxt-link>
           </li>
 
         </ul>

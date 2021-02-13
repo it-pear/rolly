@@ -13030,7 +13030,7 @@ a.text-dark:focus, a.text-dark:hover {
         display: none
     }
     .header-transparent-on .navik-menu>ul>li>a, .header-opacity-on .navik-menu>ul>li>a {
-        color: #f7f7f7
+        color: #181818
     }
     .header-transparent-on .navik-menu>ul>li>a .navik-menu-icon, .header-opacity-on .navik-menu>ul>li>a .navik-menu-icon {
         color: rgba(255, 255, 255, 0.85)
@@ -26372,8 +26372,8 @@ nav a#pull {
     }
 }
 
-.nuxt-link-active {
-    color: #f7be27;
+.nuxt-link-active .h5-sm{
+    color: #f7be27 !important;
 }
 
 #navik-header-container-top-list li>a {
