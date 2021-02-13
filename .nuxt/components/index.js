@@ -9,6 +9,7 @@ export { default as HeaderSingle } from '../..\\components\\layouts\\HeaderSingl
 export { default as Sales } from '../..\\components\\layouts\\Sales.vue'
 export { default as Sentence } from '../..\\components\\layouts\\Sentence.vue'
 export { default as ProductGallery } from '../..\\components\\product-details\\ProductGallery.vue'
+export { default as CommonProductsListIndex } from '../..\\components\\products-list\\CommonProductsListIndex.vue'
 export { default as CommonProductsListPage } from '../..\\components\\products-list\\CommonProductsListPage.vue'
 export { default as CommonRecommendProductsList } from '../..\\components\\products-list\\CommonRecommendProductsList.vue'
 export { default as ProductListCard } from '../..\\components\\products-list\\ProductListCard.vue'
@@ -28,6 +29,7 @@ export const LazyHeaderSingle = import('../..\\components\\layouts\\HeaderSingle
 export const LazySales = import('../..\\components\\layouts\\Sales.vue' /* webpackChunkName: "components/sales" */).then(c => c.default || c)
 export const LazySentence = import('../..\\components\\layouts\\Sentence.vue' /* webpackChunkName: "components/sentence" */).then(c => c.default || c)
 export const LazyProductGallery = import('../..\\components\\product-details\\ProductGallery.vue' /* webpackChunkName: "components/product-gallery" */).then(c => c.default || c)
+export const LazyCommonProductsListIndex = import('../..\\components\\products-list\\CommonProductsListIndex.vue' /* webpackChunkName: "components/common-products-list-index" */).then(c => c.default || c)
 export const LazyCommonProductsListPage = import('../..\\components\\products-list\\CommonProductsListPage.vue' /* webpackChunkName: "components/common-products-list-page" */).then(c => c.default || c)
 export const LazyCommonRecommendProductsList = import('../..\\components\\products-list\\CommonRecommendProductsList.vue' /* webpackChunkName: "components/common-recommend-products-list" */).then(c => c.default || c)
 export const LazyProductListCard = import('../..\\components\\products-list\\ProductListCard.vue' /* webpackChunkName: "components/product-list-card" */).then(c => c.default || c)

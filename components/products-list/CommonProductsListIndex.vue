@@ -4,13 +4,13 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="section-title mb-60 text-center">
-            <h2 class="h2-xl">Похожие блюда</h2>
+            <h2 class="h2-xl">Наше меню</h2>
           </div>
         </div>
       </div>
 
       <div id="catalogmenu"></div>
-
+      <products-list-filter />
       <!-- <h3 class="text-center">Самый популярные блюда</h3><br><br> -->
       <div class="row">
         <products-list-card
@@ -46,7 +46,7 @@ export default {
   },
   computed: {
     filteredPosts() {
-      return this.products.filter(p => p.category == this.cateoryProduc)
+      return this.products.filter(p => p.category == "5xAZjoE")
     }
   },
   

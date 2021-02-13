@@ -1,17 +1,17 @@
 <template>
   <div>
-		<common-products-list-page :load-products="loadProducts" />
+		<CommonProductsListIndex :load-products="loadProducts" />
   </div>
   
 </template>
 
 <script>
-import CommonProductsListPage from '~/components/products-list/CommonProductsListPage'
+import CommonProductsListIndex from '~/components/products-list/CommonProductsListIndex'
 import Product from '~/api/product'
 
 export default {
   components: {
-		CommonProductsListPage,
+		CommonProductsListIndex,
 	},
   methods: {
     async loadProducts () {

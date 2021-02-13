@@ -73,11 +73,13 @@
                     <label class="field__label">Ваш Адрес</label>
                     <input
                       v-model="adres"
-                      type="tel"
+                      type="text"
                       class="field__input form-control"
                       required
                     />
                   </div>
+               
+    
                   <div class="field">
                     <button
                       type="submit"
@@ -99,7 +101,6 @@
 <script>
 import CartProductsList from "~/components/cart/CartProductsList";
 import HeaderSingle from "~/components/layouts/HeaderSingle";
-const querystring = require("querystring");
 
 const cartStatus = {
   init: 0,
@@ -118,6 +119,7 @@ export default {
       },
       fullName: "",
       email: "",
+      adres: "",
       isFullNameInvalid: false,
       isPhoneInvalid: false,
       status: cartStatus.init,
@@ -147,7 +149,7 @@ export default {
       }
       return valid;
     },
-    async onSubmit(e) {
+    async onSubmit() {
       if (this.isValid()) {
         this.status = cartStatus.creating;
         const success = await this.$store.dispatch("cart/submit", {
@@ -156,12 +158,15 @@ export default {
           adres: this.adres
         });
         this.status = success ? cartStatus.success : cartStatus.fail;
-        e.preventDefault();
         this.$axios.post(
-          "/sendMail.php",
-          querystring.stringify(this.fullName, this.email, this.adres)
-        )
-        .then(res => {
+          "https://api.telegram.org/bot1558775847:AAEB42_s9dLU73wqhz3t90kB5S40Tul2FCI/sendMessage?chat_id=1400064880&parse_mode=html&text=" +
+          JSON.stringify(
+            "Имя " + this.fullName + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+            "Телефон " + this.email + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
+            "Адрес " + this.adres + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " 
+            
+          ) 
+        ).then(res => {
           this.sent = true;
         });
       }

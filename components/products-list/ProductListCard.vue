@@ -66,7 +66,7 @@ export default {
         size: this.selectedSize,
         price: this.product.price,
       });
-      alert('Товар добавлен в корзину')
+      // alert('Товар добавлен в корзину')
     },
   },
 };
