@@ -28,6 +28,13 @@
     "_name": "_a5af8398"
   },
   {
+    "name": "thank",
+    "path": "/thank",
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\thank.vue",
+    "chunkName": "pages/thank",
+    "_name": "_9a55b5a0"
+  },
+  {
     "name": "categories-category",
     "path": "/categories/:category",
     "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\categories\\\\_category.vue",

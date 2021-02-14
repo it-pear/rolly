@@ -8,6 +8,7 @@ const _2dda3f4a = () => interopDefault(import('..\\pages\\cart.vue' /* webpackCh
 const _ecf7da08 = () => interopDefault(import('..\\pages\\categories\\index.vue' /* webpackChunkName: "pages/categories/index" */))
 const _490ff3dc = () => interopDefault(import('..\\pages\\policy.vue' /* webpackChunkName: "pages/policy" */))
 const _a5af8398 = () => interopDefault(import('..\\pages\\products\\index.vue' /* webpackChunkName: "pages/products/index" */))
+const _9a55b5a0 = () => interopDefault(import('..\\pages\\thank.vue' /* webpackChunkName: "pages/thank" */))
 const _6e82fbf2 = () => interopDefault(import('..\\pages\\categories\\_category.vue' /* webpackChunkName: "pages/categories/_category" */))
 const _214cb384 = () => interopDefault(import('..\\pages\\products\\_product.vue' /* webpackChunkName: "pages/products/_product" */))
 const _5339b318 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -44,6 +45,10 @@ export const routerOptions = {
     path: "/products",
     component: _a5af8398,
     name: "products"
+  }, {
+    path: "/thank",
+    component: _9a55b5a0,
+    name: "thank"
   }, {
     path: "/categories/:category",
     component: _6e82fbf2,

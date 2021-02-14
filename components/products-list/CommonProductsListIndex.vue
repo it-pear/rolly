@@ -18,6 +18,11 @@
           :key="product.id"
           :product="product"
         />
+        <products-list-card
+          v-for="product in filteredPoststwo.slice(0, 3)" 
+          :key="product.id"
+          :product="product"
+        />
       </div>
       <!-- {{filteredPosts}} -->
     </div>
@@ -47,6 +52,9 @@ export default {
   computed: {
     filteredPosts() {
       return this.products.filter(p => p.category == "5xAZjoE")
+    },
+    filteredPoststwo() {
+      return this.products.filter(p => p.category == "QxlgyWB")
     }
   },
   

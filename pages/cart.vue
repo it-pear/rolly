@@ -168,6 +168,7 @@ export default {
           ) 
         ).then(res => {
           this.sent = true;
+          document.location.href = '/thank'
         });
       }
     }

@@ -10867,7 +10867,7 @@ a.text-dark:focus, a.text-dark:hover {
     box-sizing: border-box;
     font-size: 16px;
     line-height: 1.428572;
-    background-color: #a5a1a1;
+    background-color: rgba(165, 161, 161, 0.8);
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -18152,12 +18152,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .footer {
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 40px
 }
 
 #footer-3.footer {
-    padding-bottom: 80px
+    padding-bottom: 20px
 }
 
 .footer.bg-red, .footer.bg-dark {
@@ -18276,8 +18276,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 #footer-3 .footer-socials-links {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 12px
+    margin-top: 10px;
+    margin-bottom: 0
 }
 
 .foo-socials {
