@@ -77,7 +77,7 @@
                     </div>
                   </div>
 
-                  <p>
+                  <!-- <p>
                     <font style="vertical-align: inherit;">
                       <font style="vertical-align: inherit;">
                         Размер порции: 
@@ -90,7 +90,7 @@
                         </font>
                       </font>
                     </span>
-                  </p>
+                  </p> -->
 
                 </div>
 
