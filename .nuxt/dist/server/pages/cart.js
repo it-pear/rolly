@@ -450,12 +450,12 @@ module.exports = exports;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/string-replace-loader??ref--12!./pages/cart.vue?vue&type=template&id=c934814e&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/string-replace-loader??ref--12!./pages/cart.vue?vue&type=template&id=e97f5146&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('HeaderSingle',{attrs:{"product":_vm.product}}),_vm._ssrNode(" <div class=\"preloader preloader--fullpage\""+(_vm._ssrStyle(null,null, { display: (_vm.status === _vm.statuses.creating) ? '' : 'none' }))+"></div> "),_vm._ssrNode("<div class=\"cart-message text-center\""+(_vm._ssrStyle(null,null, { display: (_vm.status === _vm.statuses.success) ? '' : 'none' }))+">","</div>",[_vm._ssrNode("<br><br> "),_vm._ssrNode("<div class=\"cart-message__icon cart-message__icon__fail\">","</div>",[_c('img',{directives:[{name:"lazy-load",rawName:"v-lazy-load"}],attrs:{"data-src":__webpack_require__(131),"alt":"success"}},[])]),_vm._ssrNode(" <br> <div class=\"cart-message__title\"><h2>\n        Ваш заказ в обработке, наш менеджер в скором времени вам перезвонит\n        для уточнения заказа\n      </h2></div> <br><br>")],2),_vm._ssrNode(" "),_vm._ssrNode("<div"+(_vm._ssrClass("cart",{ loading: _vm.status === _vm.statuses.creating }))+">","</div>",[_vm._ssrNode("<div"+(_vm._ssrStyle(null,null, { display: (_vm.status !== _vm.statuses.success) ? '' : 'none' }))+">","</div>",[_c('cart-products-list'),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"container\">","</div>",[_vm._ssrNode("<div class=\"row\">","</div>",[_vm._ssrNode("<div class=\"col-lg-12\">","</div>",[_vm._ssrNode("<div class=\"cart-message text-center\""+(_vm._ssrStyle(null,null, { display: (_vm.status === _vm.statuses.fail) ? '' : 'none' }))+">","</div>",[_vm._ssrNode("<br> "),_vm._ssrNode("<div class=\"cart-message__icon\">","</div>",[_c('img',{directives:[{name:"lazy-load",rawName:"v-lazy-load"}],attrs:{"data-src":__webpack_require__(147),"alt":"fail"}},[])]),_vm._ssrNode(" <div class=\"cart-message__title\">\n                Что-то пошло не так. Попробуйте оформить заказ еще раз или\n                свяжитесь с нами по телефону.\n              </div>")],2),_vm._ssrNode(" <div class=\"cart-checkout form-holder\"><form action=\"asdasd\"><div"+(_vm._ssrClass("field",{ 'field--invalid': _vm.isFullNameInvalid }))+"><label name class=\"field__label\">Ваше имя</label> <input type=\"text\" required=\"required\""+(_vm._ssrAttr("value",(_vm.fullName)))+" class=\"field__input form-control\"></div> <br> <div"+(_vm._ssrClass("field",{ 'field--invalid': _vm.isEmailInvalid }))+"><label class=\"field__label\">Ваш телефон</label> <input type=\"tel\" required=\"required\""+(_vm._ssrAttr("value",(_vm.email)))+" class=\"field__input form-control\"></div> <br> <div"+(_vm._ssrClass("field",{ 'field--invalid': _vm.isAdresInvalid }))+"><label class=\"field__label\">Ваш Адрес</label> <input type=\"text\" required=\"required\""+(_vm._ssrAttr("value",(_vm.adres)))+" class=\"field__input form-control\"></div> <div class=\"field\"><button type=\"submit\" class=\"btn btn-md btn-red tra-red-hover btn--primary btn--large\">\n                    Заказать\n                  </button></div></form></div>")],2)])])],2)])],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/cart.vue?vue&type=template&id=c934814e&
+// CONCATENATED MODULE: ./pages/cart.vue?vue&type=template&id=e97f5146&
 
 // EXTERNAL MODULE: ./components/cart/CartProductsList.vue + 4 modules
 var CartProductsList = __webpack_require__(140);
@@ -662,14 +662,18 @@ const cartStatus = {
           data: state
         }).then(res => {
           this.sent = true;
-        }); // this.status = cartStatus.creating;
-        // const success = await this.$store.dispatch("cart/submit", {
-        //   fullName: this.fullName,
-        //   email: this.email,
-        //   adres: this.adres
-        // });
-        // this.status = success ? cartStatus.success : cartStatus.fail;
-        // document.location.href = '/thank'
+        });
+        this.$axios.post("/sendmail2.php", JSON.stringify("Имя " + this.fullName + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + "Телефон " + this.email + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + "Адрес " + this.adres + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + "Блюда " + this.filteredProducts + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + "Количество: " + this.filteredProducts2 + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + "Итоговая цена заказа " + this.cartPrice)).then(res => {
+          this.sent = true;
+        });
+        this.status = cartStatus.creating;
+        const success = await this.$store.dispatch("cart/submit", {
+          fullName: this.fullName,
+          email: this.email,
+          adres: this.adres
+        });
+        this.status = success ? cartStatus.success : cartStatus.fail;
+        document.location.href = '/thank';
       }
     }
 

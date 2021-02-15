@@ -11,12 +11,6 @@
   "LazyCartProductsList": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/cart/CartProductsList.vue"
   },
-  "ProductGallery": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/product-details/ProductGallery.vue"
-  },
-  "LazyProductGallery": {
-    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/product-details/ProductGallery.vue"
-  },
   "About": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/About.vue"
   },
@@ -64,6 +58,12 @@
   },
   "LazySentence": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/layouts/Sentence.vue"
+  },
+  "ProductGallery": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/product-details/ProductGallery.vue"
+  },
+  "LazyProductGallery": {
+    "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/product-details/ProductGallery.vue"
   },
   "CommonProductsListIndex": {
     "description": "Auto imported from C:/Users/User-ProfitClicks/Desktop/projects/rolly/components/products-list/CommonProductsListIndex.vue"
