@@ -1,5 +1,6 @@
 export { default as CommonNavbar } from '../..\\components\\CommonNavbar.vue'
 export { default as CartProductsList } from '../..\\components\\cart\\CartProductsList.vue'
+export { default as ProductGallery } from '../..\\components\\product-details\\ProductGallery.vue'
 export { default as About } from '../..\\components\\layouts\\About.vue'
 export { default as AppFooter } from '../..\\components\\layouts\\AppFooter.vue'
 export { default as AppHeader } from '../..\\components\\layouts\\AppHeader.vue'
@@ -8,7 +9,6 @@ export { default as Delivery } from '../..\\components\\layouts\\Delivery.vue'
 export { default as HeaderSingle } from '../..\\components\\layouts\\HeaderSingle.vue'
 export { default as Sales } from '../..\\components\\layouts\\Sales.vue'
 export { default as Sentence } from '../..\\components\\layouts\\Sentence.vue'
-export { default as ProductGallery } from '../..\\components\\product-details\\ProductGallery.vue'
 export { default as CommonProductsListIndex } from '../..\\components\\products-list\\CommonProductsListIndex.vue'
 export { default as CommonProductsListPage } from '../..\\components\\products-list\\CommonProductsListPage.vue'
 export { default as CommonRecommendProductsList } from '../..\\components\\products-list\\CommonRecommendProductsList.vue'
@@ -20,6 +20,7 @@ export { default as ProductsListFilter } from '../..\\components\\products-list\
 
 export const LazyCommonNavbar = import('../..\\components\\CommonNavbar.vue' /* webpackChunkName: "components/common-navbar" */).then(c => c.default || c)
 export const LazyCartProductsList = import('../..\\components\\cart\\CartProductsList.vue' /* webpackChunkName: "components/cart-products-list" */).then(c => c.default || c)
+export const LazyProductGallery = import('../..\\components\\product-details\\ProductGallery.vue' /* webpackChunkName: "components/product-gallery" */).then(c => c.default || c)
 export const LazyAbout = import('../..\\components\\layouts\\About.vue' /* webpackChunkName: "components/about" */).then(c => c.default || c)
 export const LazyAppFooter = import('../..\\components\\layouts\\AppFooter.vue' /* webpackChunkName: "components/app-footer" */).then(c => c.default || c)
 export const LazyAppHeader = import('../..\\components\\layouts\\AppHeader.vue' /* webpackChunkName: "components/app-header" */).then(c => c.default || c)
@@ -28,7 +29,6 @@ export const LazyDelivery = import('../..\\components\\layouts\\Delivery.vue' /*
 export const LazyHeaderSingle = import('../..\\components\\layouts\\HeaderSingle.vue' /* webpackChunkName: "components/header-single" */).then(c => c.default || c)
 export const LazySales = import('../..\\components\\layouts\\Sales.vue' /* webpackChunkName: "components/sales" */).then(c => c.default || c)
 export const LazySentence = import('../..\\components\\layouts\\Sentence.vue' /* webpackChunkName: "components/sentence" */).then(c => c.default || c)
-export const LazyProductGallery = import('../..\\components\\product-details\\ProductGallery.vue' /* webpackChunkName: "components/product-gallery" */).then(c => c.default || c)
 export const LazyCommonProductsListIndex = import('../..\\components\\products-list\\CommonProductsListIndex.vue' /* webpackChunkName: "components/common-products-list-index" */).then(c => c.default || c)
 export const LazyCommonProductsListPage = import('../..\\components\\products-list\\CommonProductsListPage.vue' /* webpackChunkName: "components/common-products-list-page" */).then(c => c.default || c)
 export const LazyCommonRecommendProductsList = import('../..\\components\\products-list\\CommonRecommendProductsList.vue' /* webpackChunkName: "components/common-recommend-products-list" */).then(c => c.default || c)

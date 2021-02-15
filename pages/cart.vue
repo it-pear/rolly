@@ -101,6 +101,7 @@
 import CartProductsList from "~/components/cart/CartProductsList";
 import HeaderSingle from "~/components/layouts/HeaderSingle";
 import { mapGetters } from 'vuex'
+import axios from 'axios'
 
 const cartStatus = {
   init: 0,
@@ -164,8 +165,25 @@ export default {
     async onSubmit() {
       if (this.isValid()) {
         
+        var state = {
+          name: this.fullName,
+          phone: this.email,
+          adres: this.adres,
+          menu: this.filteredProducts,
+          kolvo: this.filteredProducts2,
+          totalprice: this.cartPrice
+        };
+        this.$axios({
+          method: 'post',
+          url: 'http://holiday23.beget.tech/sendmail2.php',
+          headers: { 'content-type': 'application/json' },
+          data: state
+        }).then(res => {
+          this.sent = true;
+        });
+
         this.$axios.post(
-          "https://api.telegram.org/bot1558775847:AAEB42_s9dLU73wqhz3t90kB5S40Tul2FCI/sendMessage?chat_id=1400064880&parse_mode=html&text=" +
+          "/sendmail2.php" ,
           JSON.stringify(
             "Имя " + this.fullName + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
             "Телефон " + this.email + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
@@ -177,6 +195,7 @@ export default {
         ).then(res => {
           this.sent = true;
         });
+
         this.status = cartStatus.creating;
         const success = await this.$store.dispatch("cart/submit", {
           fullName: this.fullName,
