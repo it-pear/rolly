@@ -4,7 +4,7 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: 'spa', 
+  mode: 'ssr', 
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -78,8 +78,29 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-lazy-load'
+    '@nuxtjs/robots',
+    'nuxt-lazy-load',
+    '@nuxtjs/yandex-metrika',
+    'nuxt-facebook-pixel-module'
   ],
+  robots: {
+    Disallow: '/thank',
+    Disallow: '/cart',
+    Disallow: '/policy'
+  },
+  yandexMetrika: {
+    id: '71367259',
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+  },
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '731219361151893',
+    autoPageView: true,
+    disabled: false
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

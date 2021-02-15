@@ -21,8 +21,8 @@
       </div>
     </div> -->
 
-    <div class="slider"><img src="~/assets/img/bg1.jpg" alt=""><img src="~/assets/img/bg2mb.jpg" alt=""></div>
-    <!-- <div class="slider"><img src="~/assets/img/bg2.jpg" alt=""><img src="~/assets/img/bg2mb.jpg" alt=""></div> -->
+    <div class="slider"><img src="~/assets/img/bg1.jpg" alt=""><img src="~/assets/img/bg1mb.jpg" alt=""></div>
+    <div class="slider"><img src="~/assets/img/bg2.jpg" alt=""><img src="~/assets/img/bg2mb.jpg" alt=""></div>
     
   </VueSlickCarousel>
 </template>

@@ -13,9 +13,11 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_2f03212f from 'nuxt_plugin_plugin_2f03212f' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_vlazyload_103a1b40 from 'nuxt_plugin_vlazyload_103a1b40' // Source: .\\v-lazy-load.js (mode: 'all')
-import nuxt_plugin_axios_0177a3d2 from 'nuxt_plugin_axios_0177a3d2' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_5ab8779d from 'nuxt_plugin_plugin_5ab8779d' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_templatesplugin4ecc0c5c_53e71684 from 'nuxt_plugin_templatesplugin4ecc0c5c_53e71684' // Source: .\\templates.plugin.4ecc0c5c.js (mode: 'client')
+import nuxt_plugin_yandexmetrikaplugin96f6fd7a_5eac66ee from 'nuxt_plugin_yandexmetrikaplugin96f6fd7a_5eac66ee' // Source: .\\yandex-metrika.plugin.96f6fd7a.js (mode: 'client')
+import nuxt_plugin_vlazyload_2a945c2e from 'nuxt_plugin_vlazyload_2a945c2e' // Source: .\\v-lazy-load.js (mode: 'all')
+import nuxt_plugin_axios_7918af40 from 'nuxt_plugin_axios_7918af40' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_filters_2b4f519a from 'nuxt_plugin_filters_2b4f519a' // Source: ..\\plugins\\filters.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -52,7 +54,7 @@ Object.defineProperty(Vue.prototype, '$nuxt', {
 
 Vue.use(Meta, {"keyName":"head","attribute":"data-n-head","ssrAttribute":"data-n-head-ssr","tagIDKeyName":"hid"})
 
-const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
+const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 const originalRegisterModule = Vuex.Store.prototype.registerModule
 const baseStoreOptions = { preserveState: process.client }
@@ -73,7 +75,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"holidaysushi.ru","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:300,400,500,700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Oswald:wght@200;300;400;500;600;700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Lilita+One&display=swap"}],"script":[{"src":"\u002Fmenu.js","type":"text\u002Fjavascript"}],"style":[]},
+    head: {"title":"holidaysushi.ru","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:300,400,500,700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Oswald:wght@200;300;400;500;600;700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Lilita+One&display=swap"},{"href":"https:\u002F\u002Fmc.yandex.ru\u002Fmetrika\u002Ftag.js","rel":"preload","as":"script"}],"script":[{"src":"\u002Fmenu.js","type":"text\u002Fjavascript"}],"style":[]},
 
     store,
     router,
@@ -202,16 +204,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_2f03212f === 'function') {
-    await nuxt_plugin_plugin_2f03212f(app.context, inject)
+  if (typeof nuxt_plugin_plugin_5ab8779d === 'function') {
+    await nuxt_plugin_plugin_5ab8779d(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_vlazyload_103a1b40 === 'function') {
-    await nuxt_plugin_vlazyload_103a1b40(app.context, inject)
+  if (process.client && typeof nuxt_plugin_templatesplugin4ecc0c5c_53e71684 === 'function') {
+    await nuxt_plugin_templatesplugin4ecc0c5c_53e71684(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_0177a3d2 === 'function') {
-    await nuxt_plugin_axios_0177a3d2(app.context, inject)
+  if (process.client && typeof nuxt_plugin_yandexmetrikaplugin96f6fd7a_5eac66ee === 'function') {
+    await nuxt_plugin_yandexmetrikaplugin96f6fd7a_5eac66ee(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vlazyload_2a945c2e === 'function') {
+    await nuxt_plugin_vlazyload_2a945c2e(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_7918af40 === 'function') {
+    await nuxt_plugin_axios_7918af40(app.context, inject)
   }
 
   if (typeof nuxt_plugin_filters_2b4f519a === 'function') {
