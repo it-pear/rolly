@@ -3,56 +3,48 @@
     "name": "cart",
     "path": "/cart",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\cart.vue",
-    "chunkName": "pages/cart",
-    "_name": "_068779e0"
+    "chunkName": "pages/cart"
   },
   {
     "name": "categories",
     "path": "/categories",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\categories\\\\index.vue",
-    "chunkName": "pages/categories/index",
-    "_name": "_eccd87b4"
+    "chunkName": "pages/categories/index"
   },
   {
     "name": "policy",
     "path": "/policy",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\policy.vue",
-    "chunkName": "pages/policy",
-    "_name": "_a94e3e1c"
+    "chunkName": "pages/policy"
   },
   {
     "name": "products",
     "path": "/products",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\products\\\\index.vue",
-    "chunkName": "pages/products/index",
-    "_name": "_57e9a9de"
+    "chunkName": "pages/products/index"
   },
   {
     "name": "thank",
     "path": "/thank",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\thank.vue",
-    "chunkName": "pages/thank",
-    "_name": "_2061854c"
+    "chunkName": "pages/thank"
   },
   {
     "name": "categories-category",
     "path": "/categories/:category",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\categories\\\\_category.vue",
-    "chunkName": "pages/categories/_category",
-    "_name": "_0b31f39e"
+    "chunkName": "pages/categories/_category"
   },
   {
     "name": "products-product",
     "path": "/products/:product",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\products\\\\_product.vue",
-    "chunkName": "pages/products/_product",
-    "_name": "_1c2cbb58"
+    "chunkName": "pages/products/_product"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_df98697c"
+    "chunkName": "pages/index"
   }
 ]

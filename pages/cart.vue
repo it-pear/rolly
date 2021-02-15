@@ -175,7 +175,7 @@ export default {
         };
         this.$axios({
           method: 'post',
-          url: 'http://holiday23.beget.tech/sendmail2.php',
+          url: '//holidaysushi.ru//sendmail2.php',
           headers: { 'content-type': 'application/json' },
           data: state
         }).then(res => {
@@ -183,7 +183,7 @@ export default {
         });
 
         this.$axios.post(
-          "/sendmail2.php" ,
+          "https://api.telegram.org/bot1558775847:AAEB42_s9dLU73wqhz3t90kB5S40Tul2FCI/sendMessage?chat_id=1400064880&parse_mode=html&text=" +
           JSON.stringify(
             "Имя " + this.fullName + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
             "Телефон " + this.email + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " + " " +
