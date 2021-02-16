@@ -2,7 +2,8 @@
   <div>
     <AppHeader />
     <div id="page" class="page">
-      <Sentence />
+      <Sentence :products="products" />
+
       <Nuxt />
       <About />
       <Sales />
@@ -21,6 +22,7 @@ import Sales from '~/components/layouts/Sales'
 import Contacts from '~/components/layouts/Contacts'
 import Delivery from '~/components/layouts/Delivery'
 import Sentence from '~/components/layouts/Sentence'
+import Banner from '~/api/banners'
 
 export default {
   components: {
@@ -31,6 +33,26 @@ export default {
 		Contacts,
 		Delivery,
 		Sentence
+  },
+  methods: {
+    async loadProducts () {
+      return await Banner.list()
+		}
+  },
+  // props: {
+  //   loadProducts: {
+  //     type: Object,
+  //     required: true,
+  //   }
+  // },
+  async created() {
+    this.products = await this.loadProducts();
+  },
+  data() {
+    return {
+      products: [],
+      required: true,
+    };
   }
 }
 </script>

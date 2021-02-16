@@ -1,11 +1,18 @@
 <template>
+<div>
   <VueSlickCarousel
+    ref="carousel" 
+    v-if="products.length"
     :arrows="false"
     :dots="true"
     :autoplay="true"
     :autoplaySpeed="3000"
     :swipe="false"
   >
+    <div class="slider" v-for="(item, id) in products" :key="id">
+      <img :src="`${item.image}`" />
+      <img :src="`${item.imagemb}`" />
+    </div>
     <!-- <div id="hero-12" class="bg-02 hero-section division" :style="`background-image: url(../images/bg-02.jpg);`">
       <div class="container text-center">
         <div class="row d-flex align-items-center">
@@ -20,11 +27,10 @@
         </div>
       </div>
     </div> -->
-
-    <div class="slider"><img src="~/assets/img/bg1.jpg" alt=""><img src="~/assets/img/bg1mb.jpg" alt=""></div>
-    <div class="slider"><img src="~/assets/img/bg2.jpg" alt=""><img src="~/assets/img/bg2mb.jpg" alt=""></div>
-    
   </VueSlickCarousel>
+  
+</div>
+  
 </template>
 
 
@@ -36,6 +42,13 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   components: { VueSlickCarousel },
+  props: {
+    products: {
+      type: Array,
+      required: true
+    }
+  },
+  
 };
 </script> 
 
@@ -73,5 +86,8 @@ export default {
   .salmon-color{
     padding-top: 120px;
   }
+  /* .slick-slider img{
+    width:100%;
+  } */
 }
 </style>

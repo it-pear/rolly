@@ -2,49 +2,57 @@
   {
     "name": "cart",
     "path": "/cart",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\cart.vue",
-    "chunkName": "pages/cart"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_2dda3f4a"
   },
   {
     "name": "categories",
     "path": "/categories",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\categories\\\\index.vue",
-    "chunkName": "pages/categories/index"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\categories\\\\index.vue",
+    "chunkName": "pages/categories/index",
+    "_name": "_ecf7da08"
   },
   {
     "name": "policy",
     "path": "/policy",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\policy.vue",
-    "chunkName": "pages/policy"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\policy.vue",
+    "chunkName": "pages/policy",
+    "_name": "_490ff3dc"
   },
   {
     "name": "products",
     "path": "/products",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\products\\\\index.vue",
-    "chunkName": "pages/products/index"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\products\\\\index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_a5af8398"
   },
   {
     "name": "thank",
     "path": "/thank",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\thank.vue",
-    "chunkName": "pages/thank"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\thank.vue",
+    "chunkName": "pages/thank",
+    "_name": "_9a55b5a0"
   },
   {
     "name": "categories-category",
     "path": "/categories/:category",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\categories\\\\_category.vue",
-    "chunkName": "pages/categories/_category"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\categories\\\\_category.vue",
+    "chunkName": "pages/categories/_category",
+    "_name": "_6e82fbf2"
   },
   {
     "name": "products-product",
     "path": "/products/:product",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\products\\\\_product.vue",
-    "chunkName": "pages/products/_product"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\products\\\\_product.vue",
+    "chunkName": "pages/products/_product",
+    "_name": "_214cb384"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\User-ProfitClicks\\\\Desktop\\\\projects\\\\rolly\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "C:\\\\Users\\\\yurec\\\\OneDrive\\\\Рабочий стол\\\\projects\\\\rolly\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5339b318"
   }
 ]
