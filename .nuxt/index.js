@@ -15,7 +15,6 @@ import { createStore } from './store.js'
 
 import nuxt_plugin_plugin_2f03212f from 'nuxt_plugin_plugin_2f03212f' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_templatesplugin4b44560a_104f30e2 from 'nuxt_plugin_templatesplugin4b44560a_104f30e2' // Source: .\\templates.plugin.4b44560a.js (mode: 'client')
-import nuxt_plugin_yandexmetrikaplugin48cb7a71_61bf5165 from 'nuxt_plugin_yandexmetrikaplugin48cb7a71_61bf5165' // Source: .\\yandex-metrika.plugin.48cb7a71.js (mode: 'client')
 import nuxt_plugin_vlazyload_103a1b40 from 'nuxt_plugin_vlazyload_103a1b40' // Source: .\\v-lazy-load.js (mode: 'all')
 import nuxt_plugin_axios_0177a3d2 from 'nuxt_plugin_axios_0177a3d2' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_filters_2b4f519a from 'nuxt_plugin_filters_2b4f519a' // Source: ..\\plugins\\filters.js (mode: 'all')
@@ -75,7 +74,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"holidaysushi.ru","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"href":"https:\u002F\u002Fmc.yandex.ru\u002Fmetrika\u002Ftag.js","rel":"preload","as":"script"}],"style":[],"script":[]},
+    head: {"title":"holidaysushi.ru","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[],"style":[],"script":[]},
 
     store,
     router,
@@ -210,10 +209,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_templatesplugin4b44560a_104f30e2 === 'function') {
     await nuxt_plugin_templatesplugin4b44560a_104f30e2(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_yandexmetrikaplugin48cb7a71_61bf5165 === 'function') {
-    await nuxt_plugin_yandexmetrikaplugin48cb7a71_61bf5165(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vlazyload_103a1b40 === 'function') {
